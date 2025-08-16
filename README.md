@@ -1,7 +1,5 @@
 # SentimentLens 🚀
 
-Premium Twitter Sentiment Analysis Web App
-
 ---
 
 ## ✨ Overview
