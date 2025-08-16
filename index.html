@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SentimentLens - Twitter Sentiment Analysis</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg py-3">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="#">
+                <img src="https://img.icons8.com/ios-filled/50/ffffff/combo-chart.png" width="32" style="margin-right:8px;vertical-align:middle;"> SentimentLens
+            </a>
+            <div class="d-flex align-items-center">
+                <span id="modeToggle" class="mode-toggle" title="Toggle dark/light mode">🌙</span>
+            </div>
+        </div>
+    </nav>
+    <main class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-7 col-md-9">
+                <div class="card p-4 fade-in">
+                    <h2 class="fw-bold mb-3 text-center">Analyze Text Sentiment</h2>
+                    <form id="sentimentForm" autocomplete="off">
+                        <div class="mb-3">
+                            <textarea class="form-control" id="inputValue" rows="4" placeholder="Paste your text, paragraph, or multiple sentences here for sentiment analysis..." required></textarea>
+                        </div>
+                        <div class="mb-2" style="font-size:0.97em;color:#888;">Enter any text content and we'll analyze the sentiment of each sentence or the overall content.</div>
+                        <button type="submit" class="btn custom-btn w-100" id="analyzeBtn">
+                            <span id="analyzeBtnText"><span class="me-2"><svg width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 2v14M2 9h14" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg></span>Analyze Sentiment</span>
+                        </button>
+                        <div id="errorMsg" class="error-msg" style="display:none;"></div>
+                    </form>
+                    <div id="loadingSpinner" class="loading-spinner" style="display:none;">
+                        <div class="spinner-border text-primary" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                    </div>
+                    <div id="resultsSection" class="mt-4 fade-in" style="display:none;">
+                        <div class="sentiment-overview">
+                            <span class="sentiment-label sentiment-positive" id="positiveLabel">Positive: 0</span>
+                            <span class="sentiment-label sentiment-negative" id="negativeLabel">Negative: 0</span>
+                            <span class="sentiment-label sentiment-neutral" id="neutralLabel">Neutral: 0</span>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="sentimentChart" height="120"></canvas>
+                        </div>
+                        <div class="individual-results">
+                            <h6>Individual Results</h6>
+                            <ul class="list-group" id="individualResults"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
