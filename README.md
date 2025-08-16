@@ -25,7 +25,7 @@ Here’s how SentimentLens looks in action:
 
 | Analyze Text Sentiment | Sentiment Overview & Results |
 |:----------------------:|:---------------------------:|
-| ![Analyze Text](Capture.PNG) | ![Overview](Capture2.PNG) |
+| ![Analyze Text](Capture.PNG) | ![Overview](Capture 2.PNG) |
 | ![Results](Capture3.PNG) | ![Distribution](Capture4.PNG) |
 
 ---
