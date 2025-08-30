@@ -52,9 +52,4 @@ Here’s how SentimentLens looks in action:
 
 ---
 
-## 📄 License
-MIT
-
----
-
 > Made with ❤️ by Priyanshi-Solanki
